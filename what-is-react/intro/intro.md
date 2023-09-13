@@ -35,22 +35,49 @@ Si replicamos cuales serían los componenentes en la Imagen 1, podemos evaluar q
 - TodoItems Component que a su vez tiene n hijos "Item" Component
 
 En React es posible enviar datos, desestructurados es decir parámetros por parámetro por ejemplo:
-                <TodoItems entries={toDoList} deleteItem={deleteItem} />
+- <TodoItems entries={toDoList} deleteItem={deleteItem} />
+
 Se envía la lista de items y el objeto/item a eliminar, lo cual hace puntualizar sólo en esos 2 valores de entrada
 
 Distinto cuando se maneja con "props" donde se refiere al conjunto de datos que tiene a su alcance,
+
 esto puede generar que parametros innecesarios puedan estar al alcance y que estos puedan ser manipulados.
 
 ![Imagen 3](https://github.com/willsantisteban/react/blob/main/what-is-react/intro/funcion_react_con_parametros.png?raw=true)
 
 Otro de los puntos es que React usa one-way data binding lo cual hace más eficiente la actualización del DOM,
+
 Es decir, ante un cambio compara el DOM viejo vs el DOM actualizado, encuentra las diferencias y mediante un mecanismo llamado "Reconciliation"
+
 actualiza el modelo sólo donde requiere actualización.
+
 La contraparte con otros modelos (mvc o two-way binding) es que la vista siempre está "escuchando" los cambios para actualizar y 
+
 en mucho casos actualiza todo el DOM lo que hace muy lenta la aplicación, con aplicaciones básicas puede andar bien, sin embargo
+
 con aplicaciones escalables esto no es performante.
 
 ![Imagen 3](https://github.com/willsantisteban/react/blob/main/what-is-react/intro/diferents_bettwen_render_data_in_react.png?raw=true)
 
 
 ![Imagen 3](https://github.com/willsantisteban/react/blob/main/what-is-react/intro/diferents_bettwen_render_data_in_react_01.png?raw=true)
+
+
+- React es 100% basado en componentes
+- Todas las aplicaciones React empiezan con un solo componente (App)
+- Un solo componente renderiza el browser (DOM)
+
+- React es una Libreria, no un Framework.. está definido como un grupo de funciones o clases relacionadas que performance operaciones definidas.
+
+![Imagen 3](https://github.com/willsantisteban/react/blob/main/what-is-react/intro/react_library_01.png?raw=true)
+
+React particularmente son 2 librerias:
+- import react from 'react';
+- import reactDOM from 'react-dom';
+
+Distinto a un Framework que es una colección de herramientas/funciones/programas con un especifico objetivo en mente (construir un sitio web)
+
+Lo que difiere entre uno y otro es:
+- En el framework tiene el control del flujo/desarrollo que estás creando a diferencia de la libreria donde tu tienes el control de lo que vas creando.
+
+![Imagen 3](https://github.com/willsantisteban/react/blob/main/what-is-react/intro/nextjs_framework_react.png?raw=true)
